@@ -28,6 +28,13 @@ class Html5Test extends TestCase
         return $out;
     }
 
+    public function testBigFile()
+    {
+    	$t = microtime(1);
+    	$this->html5->load(__DIR__."/a.html");
+    	var_dump(microtime(1)-$t);
+    }
+
     public function testLoadOptions()
     {
         // doc
