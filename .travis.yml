@@ -18,6 +18,7 @@ notifications:
   irc: "irc.freenode.net#masterminds"
 
 before_script:
+  - phpenv config-rm xdebug.ini
   - composer self-update
   - composer install
 
